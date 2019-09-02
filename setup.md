@@ -47,7 +47,7 @@ To set up your first virtual environment, open the Terminal on macOS or the Anac
 
 As you might expect, the `--name` parameter tells conda that the next phrase should be the name of this virtual environment. The `python=3.7` parameter is optional, but tells conda that this virtual environment requires Python (obviously) and that its version should be 3.7.x - this is important so that we are all working with the same version of Python.
 
-Conda may install some packages here, which it will ask you to confirm before doing so. Once the setup is done, you can activate the conda environment you just created by typing `conda activate MIE304` on macOS, or simply `activate Lab1` on Windows. In your prompt, you should now see the name of the enviroment in brackets before the prompt line, like so:
+Conda may install some packages here, which it will ask you to confirm before doing so. Once the setup is done, you can activate the conda environment you just created by typing `conda activate MIE304` on macOS, or simply `activate MIE304` on Windows. In your prompt, you should now see the name of the enviroment in brackets before the prompt line, like so:
 
 ```
 (MIE304) ➜  ~
