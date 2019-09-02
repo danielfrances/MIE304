@@ -43,14 +43,14 @@ Virtual environments are a powerful tool which allows us to maintain multiple di
 
 To set up your first virtual environment, open the Terminal on macOS or the Anaconda Prompt on Windows. We can then create a new virtual environment with the following command: 
 
-```conda create --name Lab1 python=3.4```
+```conda create --name MIE304 python=3.7```
 
-As you might expect, the `--name` parameter tells conda that the next phrase should be the name of this virtual environment. The `python=3.7` parameter is optional, but tells conda that this virtual environment requires Python (obviously) and that its version should be 3.4.x - this is important so that we are all working with the same version of Python.
+As you might expect, the `--name` parameter tells conda that the next phrase should be the name of this virtual environment. The `python=3.7` parameter is optional, but tells conda that this virtual environment requires Python (obviously) and that its version should be 3.7.x - this is important so that we are all working with the same version of Python.
 
-Conda may install some packages here, which it will ask you to confirm before doing so. Once the setup is done, you can activate the conda environment you just created by typing `conda activate Lab1` on macOS, or simply `activate Lab1` on Windows. In your prompt, you should now see the name of the enviroment in brackets before the prompt line, like so:
+Conda may install some packages here, which it will ask you to confirm before doing so. Once the setup is done, you can activate the conda environment you just created by typing `conda activate MIE304` on macOS, or simply `activate Lab1` on Windows. In your prompt, you should now see the name of the enviroment in brackets before the prompt line, like so:
 
 ```
-(Lab1) ➜  ~
+(MIE304) ➜  ~
 ```
 
 This confirms that we are now in the enviroment we just created, and that anything we install into Python here will stay within this sandbox. Next, let's install some basic tools:
@@ -58,29 +58,5 @@ This confirms that we are now in the enviroment we just created, and that anythi
 `conda install numpy jupyter pip matplotlib`
 
 You can enumerate as many package names as you like after the `install` keyword and conda will install them all at once. Again, it may ask for your confirmation before installing any packages you don't already have.
-
-We also want to install Pytorch, but because Pytorch is distributed separately to most Anaconda packages, the command is slightly different:
-
-`conda install -c pytorch pytorch torchvision`
-
-The `-c` argument here tells conda what "channel" it can find the package in. By default, conda only searches the `anaconda` channel, where packages are released by default.
-
-You can verify that Pytorch was installed correctly by opening a `python` session and entering the following: 
-
-```
-import torch
-x = torch.rand(5, 3)
-print(x)
-```
-
-The output should be something similar to:
-
-```
-tensor([[0.3380, 0.3845, 0.3217],
-        [0.8337, 0.9050, 0.2650],
-        [0.2979, 0.7141, 0.9069],
-        [0.1449, 0.1132, 0.1375],
-        [0.4675, 0.3947, 0.1426]])
-```
 
 If you have made it to here, congratulations! Your Anaconda environment is all set up, as well as your virtual environment for the first lab. You can `deactivate` your environment at any time by using the command `conda deactivate` on macOS, or simply `deactivate` on Windows.
