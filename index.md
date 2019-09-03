@@ -55,7 +55,7 @@ Conda may install some packages here, which it will ask you to confirm before do
 
 This confirms that we are now in the enviroment we just created, and that anything we install into Python here will stay within this sandbox. Next, let's install some basic tools:
 
-`conda install numpy jupyter pip matplotlib`
+`conda install numpy jupyter pip matplotlib pandas`
 
 You can enumerate as many package names as you like after the `install` keyword and conda will install them all at once. Again, it may ask for your confirmation before installing any packages you don't already have.
 
